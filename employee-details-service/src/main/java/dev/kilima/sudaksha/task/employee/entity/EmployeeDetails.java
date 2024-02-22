@@ -85,7 +85,5 @@ public class EmployeeDetails {
 	public void setProjectId(String projectId) {
 		this.projectId = projectId;
 	}
-	
-	
 
 }
