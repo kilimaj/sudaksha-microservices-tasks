@@ -1,13 +1,8 @@
 package dev.kilima.sudaksha.task.employee.entity;
 
-import java.util.List;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -16,31 +11,24 @@ public class EmployeeDetails {
 	@Id
 	@Column(length = 13)
 	private String empid;
-	
+
 	@Column
 	private String empname;
-	
+
 	@Column
 	private String designation;
-	
+
 	@Column(columnDefinition = "date")
 	private String dateOfJoin;
-	
-	@ManyToMany
-	@JoinTable(
-			name = "employee_skils",
-			joinColumns = @JoinColumn(name = "employee_id"),
-			inverseJoinColumns = @JoinColumn(name = "skill_id"))
-	private List<Skills> employeeSkills;
-	
+
+	@Column
+	private String employeeSkills;
+
 	@Column
 	private String availability;
-	
-	@Column(length = 13, columnDefinition = "varchar default 'not assigned'")
+
+	@Column(length = 13)
 	private String projectId;
-	
-	@Column(columnDefinition = "varchar default 'not assigned'")
-	private String projectName;
 
 	public String getEmpid() {
 		return empid;
@@ -74,11 +62,11 @@ public class EmployeeDetails {
 		this.dateOfJoin = dateOfJoin;
 	}
 
-	public List<Skills> getEmployeeSkills() {
+	public String getEmployeeSkills() {
 		return employeeSkills;
 	}
 
-	public void setEmployeeSkills(List<Skills> employeeSkills) {
+	public void setEmployeeSkills(String employeeSkills) {
 		this.employeeSkills = employeeSkills;
 	}
 
@@ -97,15 +85,7 @@ public class EmployeeDetails {
 	public void setProjectId(String projectId) {
 		this.projectId = projectId;
 	}
+	
+	
 
-	public String getProjectName() {
-		return projectName;
-	}
-
-	public void setProjectName(String projectName) {
-		this.projectName = projectName;
-	}
-	
-	
-	
 }
