@@ -1,14 +1,16 @@
 package dev.kilima.sudaksha.task.employee.service.impl;
 
 import java.time.LocalDate;
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import dev.kilima.sudaksha.task.employee.entity.EmployeeDetails;
 import dev.kilima.sudaksha.task.employee.repository.EmployeeDetailsRepository;
 import dev.kilima.sudaksha.task.employee.service.EmployeeService;
-
+@Service
 public class EmployeeServiceImpl implements EmployeeService {
 
 	@Autowired
@@ -42,6 +44,12 @@ public class EmployeeServiceImpl implements EmployeeService {
 		emp.setAvailability("Not assigned");
 		repo.save(emp);
 		return emp.getEmpid();
+	}
+
+	@Override
+	public Optional<List<EmployeeDetails>> getAllEmployees() {
+		// TODO Auto-generated method stub
+		return Optional.of(repo.findAll());
 	}
 
 }
