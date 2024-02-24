@@ -5,8 +5,9 @@ import javax.sql.DataSource;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
-
+@Configuration
 public class MyBatisConfiguration {
 	
 	// Database definition
