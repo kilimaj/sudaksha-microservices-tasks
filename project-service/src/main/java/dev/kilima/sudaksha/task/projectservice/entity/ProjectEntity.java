@@ -10,12 +10,12 @@ public class ProjectEntity {
 
 	private String duration;
 
-	public int getProjectid() {
+	public int getProject_id() {
 		return project_id;
 	}
 
-	public void setProjectid(int projectid) {
-		this.project_id = projectid;
+	public void setProject_id(int project_id) {
+		this.project_id = project_id;
 	}
 
 	public String getTitle() {
@@ -41,5 +41,7 @@ public class ProjectEntity {
 	public void setDuration(String duration) {
 		this.duration = duration;
 	}
+
+	
 	
 }

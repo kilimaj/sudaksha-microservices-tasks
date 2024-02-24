@@ -3,11 +3,12 @@ package dev.kilima.sudaksha.task.projectservice.service.impl;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import dev.kilima.sudaksha.task.projectservice.dao.ProjectDao;
 import dev.kilima.sudaksha.task.projectservice.entity.ProjectEntity;
 import dev.kilima.sudaksha.task.projectservice.service.ProjectService;
-
+@Service
 public class ProjectServiceImpl implements ProjectService {
 
 	@Autowired
