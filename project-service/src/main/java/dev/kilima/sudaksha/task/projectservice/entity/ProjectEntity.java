@@ -1,23 +1,13 @@
 package dev.kilima.sudaksha.task.projectservice.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-@Entity
-@Table(name = "Projects")
 public class ProjectEntity {
-	@Id
+
 	private String projectId;
-	
-	@Column
+
 	private String title;
-	
-	@Column
+
 	private int teamSize;
-	
-	@Column
+
 	private String duration;
 
 	public String getProjectId() {
@@ -51,6 +41,6 @@ public class ProjectEntity {
 	public void setDuration(String duration) {
 		this.duration = duration;
 	}
-	
+
 	
 }
