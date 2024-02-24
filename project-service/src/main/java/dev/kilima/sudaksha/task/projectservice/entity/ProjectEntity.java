@@ -2,7 +2,7 @@ package dev.kilima.sudaksha.task.projectservice.entity;
 
 public class ProjectEntity {
 
-	private String projectId;
+	private int projectid;
 
 	private String title;
 
@@ -10,12 +10,12 @@ public class ProjectEntity {
 
 	private String duration;
 
-	public String getProjectId() {
-		return projectId;
+	public int getProjectid() {
+		return projectid;
 	}
 
-	public void setProjectId(String projectId) {
-		this.projectId = projectId;
+	public void setProjectid(int projectid) {
+		this.projectid = projectid;
 	}
 
 	public String getTitle() {
@@ -41,6 +41,5 @@ public class ProjectEntity {
 	public void setDuration(String duration) {
 		this.duration = duration;
 	}
-
 	
 }
