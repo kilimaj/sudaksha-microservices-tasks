@@ -14,10 +14,10 @@ import dev.kilima.sudaksha.task.projectservice.entity.ProjectEntity;
 public interface ProjectDao {
 
 	@Insert("insert into projects values (#{project_id},#{title}, #{teamsize}, #{duration})")
-	int addEmployee(ProjectEntity project);
+	int addProject(ProjectEntity project);
 
 	@Update("update projects set title=#{title}, teamsize=#{teamsize}, duration=#{duration}")
-	int updateEmployee(ProjectEntity project);
+	int updateProject(ProjectEntity project);
 
 	@Delete("delete from projects where project_id=#{project_id}")
 	int deleteProject(int project_id);
